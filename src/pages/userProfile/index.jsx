@@ -4,6 +4,8 @@ import styles from "./styles.module.css";
 import PropTypes from "prop-types";
 
 export default function UserProfile({ users }) {
+  console.log("Rendering UsersProfile component");
+
   const { userId, username } = useParams();
   const user = users.find((user) => user.id === parseInt(userId));
   if (!user) {

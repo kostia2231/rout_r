@@ -4,6 +4,7 @@ import styles from "./styles.module.css";
 import PropTypes from "prop-types";
 
 export default function Users({ users }) {
+  console.log("Rendering Users");
   return (
     <div className={styles.usersWrapper}>
       <h1>USERS</h1>

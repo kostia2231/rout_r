@@ -8,11 +8,14 @@ import UserProfile from "./pages/userProfile";
 import Users from "./pages/users";
 
 function App() {
+  console.log("Rendering App");
+
   const [allUsers, setAllUsers] = useState([]);
   const BASE_URL = "https://dummyjson.com/users";
 
   async function getUsers() {
     try {
+      console.log("Fetching users");
       const response = await axios.get(BASE_URL);
       return response.data;
     } catch (error) {
@@ -22,6 +25,7 @@ function App() {
 
   useEffect(() => {
     getUsers().then((data) => {
+      console.log("Getting/Setting users data");
       setAllUsers(data.users);
     });
   }, []);
@@ -40,4 +44,5 @@ function App() {
     </>
   );
 }
+
 export default App;
