@@ -1,26 +1,20 @@
-import { Link } from "react-router-dom";
 import React from "react";
+import { Link } from "react-router-dom";
+import styles from "./styles.module.css";
 
-const users = [
-  { id: 1, name: "John Doe" },
-  { id: 2, name: "Jane Smith" },
-  { id: 3, name: "Bob Johnson" },
-];
-
-function Users() {
+export default function Users({ users }) {
   return (
-    <div>
-      <h1>Users</h1>
+    <div className={styles.usersWrapper}>
+      <h1>USERS</h1>
       <ul>
-        {users.map(({ id, name }) => {
-          return (
-            <li key={id}>
-              <Link to={`/user/${id}`}>{name}</Link>
-            </li>
-          );
-        })}
+        {users.map(({ id, firstName, lastName }) => (
+          <li key={id}>
+            <Link to={`/users/${id}/${firstName} ${lastName}`}>
+              {firstName} {lastName}
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );
 }
-export default Users;

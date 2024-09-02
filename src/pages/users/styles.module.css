@@ -1,0 +1,16 @@
+.usersWrapper {
+  margin: 1rem;
+}
+.usersWrapper * {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  color: blue;
+}
+
+a:hover {
+  color: rgb(123, 123, 255);
+  transition: 0.3s ease;
+}

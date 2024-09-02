@@ -1,0 +1,18 @@
+.navbarWrapper {
+  background-color: black;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  padding-left: 1rem;
+}
+
+.navbar * {
+  color: white;
+  text-decoration: none;
+}
