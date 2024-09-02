@@ -9,12 +9,12 @@ import Users from "./pages/users";
 function App() {
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/users" element={<Users />} />
-        <Route path="/user/:userId" element={<UserProfile />} />
+        <Route path="/user/:userId/:username" element={<UserProfile />} />
       </Routes>
-      <Navbar />
     </>
   );
 }
