@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
+import PropTypes from "prop-types";
 
 export default function Users({ users }) {
   return (
@@ -18,3 +19,14 @@ export default function Users({ users }) {
     </div>
   );
 }
+
+Users.propTypes = {
+  users: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      age: PropTypes.number.isRequired,
+      role: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
